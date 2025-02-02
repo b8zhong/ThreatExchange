@@ -117,3 +117,5 @@ class IContentTypeConfigStore(metaclass=abc.ABCMeta):
         """
         Return all installed content types.
         """
+
+# monke
