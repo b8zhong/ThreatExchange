@@ -407,7 +407,7 @@ def compare():
         if type(hashes_to_compare) != list:
             abort(400, f"Comparison hashes for {signal_type_str} was not a list")
         if hashes_to_compare.__len__() != 2:
-            abort(400, f"Comparison hash list lenght must be exactly 2")
+            abort(400, f"Comparison hash list length must be exactly 2")
         signal_type = _validate_and_transform_signal_type(signal_type_str, storage)
         try:
             left = signal_type.validate_signal_str(hashes_to_compare[0])
@@ -420,7 +420,7 @@ def compare():
 
 
 def initiate_index_cache(app: Flask, scheduler: APScheduler | None) -> None:
-    assert not hasattr(app, "signal_type_index_cache"), "Aready initialized?"
+    assert not hasattr(app, "signal_type_index_cache"), "Already initialized?"
     storage = get_storage()
     cache = {
         st.signal_type.get_name(): _SignalIndexInMemoryCache.get_initial(st.signal_type)

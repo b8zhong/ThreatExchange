@@ -209,7 +209,7 @@ class _FetchStoreAccessor:
 
 class CLISettings:
     """
-    A God object for all miscellanious persisted state to make the CLI work
+    A God object for all miscellaneous persisted state to make the CLI work
     """
 
     def __init__(

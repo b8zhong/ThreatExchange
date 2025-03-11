@@ -15,7 +15,7 @@ class SignalTypeHashTest:
     """
     Helpers to help you quickly test common functionality
 
-    Most functions are designed to be used to be used in a provider fasion
+    Most functions are designed to be used to be used in a provider fashion
     to rapidly make simple tests.
     """
 

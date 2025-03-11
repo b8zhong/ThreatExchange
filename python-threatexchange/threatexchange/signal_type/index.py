@@ -45,7 +45,7 @@ class SignalSimilarityInfo:
     """
     Metadata with context about a comparison between content or signals.
 
-    This can be used for logging and debugging, but could also be re-used
+    This can be used for logging and debugging, but could also be reused
     as an argument to match functions to use as thresholds.
 
     This information often is treated as a distance, and so comparison

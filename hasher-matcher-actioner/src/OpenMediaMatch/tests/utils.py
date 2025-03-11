@@ -28,7 +28,7 @@ def app() -> t.Iterator[Flask]:
     app = create_app()
 
     with app.app_context():
-        # If we want to try and re-use the database between tests,
+        # If we want to try and reuse the database between tests,
         # there's a way to push a context that will undo all commits.
         # For now, drop and recreate is a fast way to do it.
         reset_tables()

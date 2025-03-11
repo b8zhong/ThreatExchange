@@ -34,7 +34,7 @@ from threatexchange.signal_type import index
 
 class CliIndexStore:
     """
-    Persistance layer for SignalTypeIndex objects for the cli.
+    Persistence layer for SignalTypeIndex objects for the cli.
 
     They are just stored to a file directory, with names based on their type.
     """

@@ -726,7 +726,7 @@ def _sync_content_signal(
         for cs in unseen_signals_in_db_for_fetch_key.values():
             to_delete.append(cs)
 
-    # Noo! No bulk delete at the moment, sequential it is
+    # No! No bulk delete at the moment, sequential it is
     for cs in to_delete:
         sesh.delete(cs)
     if to_add:

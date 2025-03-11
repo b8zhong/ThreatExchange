@@ -199,7 +199,7 @@ class PDQMultiHashIndex(PDQHashIndex):
 
     Properties:
     nhash: int (optional)
-    Optional number of hashmaps for the underlaying faiss index to use for
+    Optional number of hashmaps for the underlying faiss index to use for
     the Multi-Index Hashing lookups.
     """
 
@@ -243,7 +243,7 @@ class PDQMultiHashIndex(PDQHashIndex):
     @property
     def mih_index(self):
         """
-        Convenience accessor for the underlaying faiss.IndexBinaryMultiHash index regardless of if it is wrapped in an ID
+        Convenience accessor for the underlying faiss.IndexBinaryMultiHash index regardless of if it is wrapped in an ID
         map or not.
         """
         if hasattr(self.faiss_index, "index"):
@@ -280,7 +280,7 @@ class PDQMultiHashIndex(PDQHashIndex):
         """
         Workaround method for creating an in-memory lookup mapping custom ids to internal index id representations. The
         rev_map property provided in faiss.IndexBinaryIDMap2 has no accessible `at` or other index lookup methods in swig
-        and the implementation of `reconstruct` in faiss.IndexBinaryIDMap2 requires the underlaying index to directly
+        and the implementation of `reconstruct` in faiss.IndexBinaryIDMap2 requires the underlying index to directly
         support `reconstruct`, which faiss.IndexBinaryMultiHash does not. Thus this workaround is needed until either the
         values in the faiss.IndexBinaryIDMap2 rev_map can be accessed directly or faiss.IndexBinaryMultiHash is directly
         supports `reconstruct` calls.

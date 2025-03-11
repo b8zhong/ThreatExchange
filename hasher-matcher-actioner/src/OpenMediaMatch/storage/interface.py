@@ -10,7 +10,7 @@ implements all interfaces, but different implementations may
 prefer to store different data in different places.
 
 For implementations, see storage.mocked.MockedStore, which provides
-plausable defaults for all of these interfaces, useful for testing,
+plausible defaults for all of these interfaces, useful for testing,
 or storage.default.DefaultOMMStore, which uses a combination of
 static configuration and postgres.
 """
@@ -112,7 +112,7 @@ class ISignalTypeIndexStore(metaclass=abc.ABCMeta):
         self, signal_type: t.Type[SignalType]
     ) -> t.Optional[SignalTypeIndexBuildCheckpoint]:
         """
-        Returns chekpoint for last index build if it exists
+        Returns checkpoint for last index build if it exists
         """
 
 
@@ -127,7 +127,7 @@ class SignalExchangeAPIConfig:
 
     @property
     def supports_auth(self):
-        """Whether this API takes credentials for authentification"""
+        """Whether this API takes credentials for authentication"""
         return issubclass(self.api_cls, auth.SignalExchangeWithAuth)
 
     def set_credentials_from_json_dict(self, d: dict[str, t.Any]) -> None:

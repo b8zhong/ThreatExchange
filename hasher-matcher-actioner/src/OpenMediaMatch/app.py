@@ -284,5 +284,5 @@ def _get_api_cfg(ctx: click.Context, param: click.Parameter, value: str):
         raise click.BadParameter("No such api")
     api_cls = config.api_cls
     if not issubclass(api_cls, auth.SignalExchangeWithAuth):
-        raise click.BadParameter("api doesn't take authentification")
+        raise click.BadParameter("api doesn't take authentication")
     return config

@@ -58,7 +58,7 @@ class PdqSignal(
 
     @classmethod
     def validate_signal_str(cls, signal_str: str) -> str:
-        """PDQ hash contains 64 hexidecimal characters."""
+        """PDQ hash contains 64 hexadecimal characters."""
         if not re.match("^[0-9a-f]{64}$", signal_str):
             raise ValueError("invalid PDQ hash")
         return signal_str

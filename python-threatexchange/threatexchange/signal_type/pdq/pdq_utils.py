@@ -42,7 +42,7 @@ def binary_str_to_hex(pdq_binary: str) -> str:
     Convert a binary string to a hexadecimal string. Requires input string to be length BITS_IN_PDQ.
     """
     assert len(pdq_binary) == BITS_IN_PDQ
-    # [2:] ignores the 0x at the begining of the hex_str
+    # [2:] ignores the 0x at the beginning of the hex_str
     result = hex(int(pdq_binary, 2))[2:].zfill(PDQ_HEX_STR_LEN)
     assert len(result) == PDQ_HEX_STR_LEN
     return result

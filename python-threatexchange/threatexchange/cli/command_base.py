@@ -29,7 +29,7 @@ class Command:
         """
         Shortcut for adding the command to the parser.
 
-        Propbably don't override.
+        Probably don't override.
         """
         command_ap = subparsers.add_parser(
             cls.get_name(),
